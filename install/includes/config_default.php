@@ -1,11 +1,11 @@
 <?php
-    $settings = array(
+	$settings = array(
 
 
         ###### ADMIN ######
         'admin' => array(
             'max_upload_size' => '5242880',
-            'upload_blacklist' => '/\.(?:php[34567s]?|phtml)$/i',
+            'upload_blacklist' => '/\\.(?:php[34567s]?|phtml)$/i',
         ),
         ########
 
@@ -17,7 +17,7 @@
             'association_maximum_rows' => '5',
             'lang' => 'en',
             'pages_table_nest_children' => 'no',
-            'version' => VERSION,
+            'version' => '2.7.10',
             'cookie_prefix' => 'sym-',
             'session_gc_divisor' => '10',
             'cell_truncation_length' => '75',
@@ -31,7 +31,7 @@
         'log' => array(
             'archive' => '1',
             'maxsize' => '102400',
-            'filter' => E_ALL ^ E_DEPRECATED,
+            'filter' => 24575,
         ),
         ########
 
@@ -45,7 +45,7 @@
             'db' => null,
             'tbl_prefix' => 'sym_',
             'query_caching' => 'on',
-            'query_logging' => 'on'
+            'query_logging' => 'on',
         ),
         ########
 
@@ -59,8 +59,8 @@
 
         ###### GENERAL ######
         'general' => array(
-            'sitename' => 'Symphony CMS',
-            'useragent' => 'Symphony/' . VERSION,
+            'sitename' => 'The Lab',
+            'useragent' => 'Symphony/2.7.10',
         ),
         ########
 
@@ -82,16 +82,40 @@
         ###### REGION ######
         'region' => array(
             'time_format' => 'g:i a',
-            'date_format' => 'm/d/Y',
+            'date_format' => 'd F Y',
             'datetime_separator' => ' ',
-            'timezone' => null
+            'timezone' => 'America/Vancouver',
         ),
         ########
 
 
-        ###### CACHE ######
+        ###### CACHE_DRIVER ######
         'cache_driver' => array(
             'default' => 'database',
+        ),
+        ########
+
+
+        ###### MAINTENANCE_MODE ######
+        'maintenance_mode' => array(
+            'enabled' => 'no',
+        ),
+        ########
+
+
+        ###### IMAGE ######
+        'image' => array(
+            'cache' => '1',
+            'quality' => '90',
+        ),
+        ########
+
+
+        ###### REMOTE_DATASOURCE ######
+        'remote_datasource' => array(
+            'csv-delimiter' => ',',
+            'csv-enclosure' => '"',
+            'csv-escape' => '\\',
         ),
         ########
     );
