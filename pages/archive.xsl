@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:output method="xml"
-	doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-	doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-	omit-xml-declaration="yes"
-	encoding="UTF-8"
-	indent="yes" />
+<xsl:import href="../utilities/master.xsl"/>
+<xsl:import href="../utilities/get-archive.xsl"/>
+<xsl:import href="../utilities/get-comments.xsl"/>
 
-<xsl:template match="/">
-	<h1><xsl:value-of select="/data/params/page-title"/></h1>
+<xsl:template match="data">
+	<h2><xsl:value-of select="$page-title"/></h2>
+	<h3 class="script">History in the making</h3>
+	<xsl:apply-templates select="archive"/>
 </xsl:template>
 
 </xsl:stylesheet>
