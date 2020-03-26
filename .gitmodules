@@ -28,3 +28,6 @@
 [submodule "extensions/entry_relationship_field"]
 	path = extensions/entry_relationship_field
 	url = https://github.com/DeuxHuitHuit/entry_relationship_field.git
+[submodule "extensions/remote_datasource"]
+	path = extensions/remote_datasource
+	url = https://github.com/symphonycms/remote_datasource.git
