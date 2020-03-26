@@ -17,7 +17,7 @@ class eventsave_message extends SectionEvent
                 'website' => 'https://lab.stephenbau.com',
                 'email' => 'bauhouse@gmail.com'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2020-03-26T17:27:30+00:00',
+            'release-date' => '2020-03-26T18:21:06+00:00',
             'trigger-condition' => 'action[save-message]'
         );
     }
