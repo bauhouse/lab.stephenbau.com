@@ -6,8 +6,15 @@
 	<xsl:template name="about">
 		<div id="about" class="section">
 			<h3>About</h3>
-			<img src="{$root}/image/2/60/68/2/{about-me/entry/my-photo/@path}/{about-me/entry/my-photo/filename}" alt="Avatar" class="avatar" />
-			<xsl:copy-of select="about-me/entry/about-me-snippet/*" />
+			<img src="{$workspace}{about-me/entry/photo/@path}/{about-me/entry/photo/filename}" alt="Avatar" class="avatar" />
+			<xsl:for-each select="about-me/entry">
+				<xsl:if test="name">
+					<p>
+						<a href="{link}"><xsl:value-of select="name" /></a>
+					</p>
+				</xsl:if>
+				<xsl:copy-of select="summary/*" />
+			</xsl:for-each>
 			<p> <a href="{$root}/about/">Read more</a>.</p>
 		</div>
 	</xsl:template>
@@ -25,7 +32,7 @@
 			<h3>Posts by categories</h3>
 			<p>Dig in the archives.</p>
 			<ul>
-				<xsl:for-each select="categories/entry[@articles &gt; '0']">
+				<xsl:for-each select="categories/entry[@articles-categories &gt; '0']">
 					<li><a href="{$root}/archive/category/{title/@handle}/"><xsl:value-of select="title"/></a></li>
 				</xsl:for-each>
 			</ul>
@@ -62,7 +69,7 @@
 				<p>I'm on the web, visit me at</p>
 				<div id="links">
 					<ul>
-						<xsl:for-each select="//external-links/item">
+						<xsl:for-each select="elsewhere/entry">
 							<li><a href="{link}"><xsl:value-of select="title"/></a></li>
 						</xsl:for-each>
 					</ul>
