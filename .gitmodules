@@ -22,3 +22,6 @@
 [submodule "extensions/xssfilter"]
 	path = extensions/xssfilter
 	url = git://github.com/symphonycms/xssfilter.git
+[submodule "extensions/uniqueuploadfield"]
+	path = extensions/uniqueuploadfield
+	url = https://github.com/michael-e/uniqueuploadfield.git
