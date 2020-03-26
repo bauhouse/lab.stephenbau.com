@@ -15,6 +15,8 @@ class datasourceabout_me extends SectionDatasource
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamINCLUDEDELEMENTS = array(
+        'name',
+        'link',
         'photo',
         'summary: formatted',
         'bio: formatted'
@@ -35,7 +37,7 @@ class datasourceabout_me extends SectionDatasource
                 'website' => 'https://lab.stephenbau.com',
                 'email' => 'bauhouse@gmail.com'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2020-03-26T16:36:59+00:00'
+            'release-date' => '2020-03-26T19:51:27+00:00'
         );
     }
 

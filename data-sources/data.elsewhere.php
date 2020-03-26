@@ -1,30 +1,22 @@
 <?php
 
-class datasourcearchive extends SectionDatasource
+class datasourceelsewhere extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'archive';
-    public $dsParamORDER = 'desc';
-    public $dsParamGROUP = '4';
-    public $dsParamPAGINATERESULTS = 'yes';
+    public $dsParamROOTELEMENT = 'elsewhere';
+    public $dsParamORDER = 'asc';
+    public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
     public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamPARAMOUTPUT = array(
-        'system:id'
-    );
-    public $dsParamSORT = 'date';
+    public $dsParamSORT = 'title';
     public $dsParamHTMLENCODE = 'no';
-    public $dsParamASSOCIATEDENTRYCOUNTS = 'yes';
-
-    public $dsParamFILTERS = array(
-        '3' => 'yes',
-    );
+    public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamINCLUDEDELEMENTS = array(
         'title',
-        'date'
+        'link'
     );
 
     public function __construct($env = null, $process_params = true)
@@ -36,19 +28,19 @@ class datasourcearchive extends SectionDatasource
     public function about()
     {
         return array(
-            'name' => 'Archive',
+            'name' => 'Elsewhere',
             'author' => array(
                 'name' => 'Stephen Bau',
                 'website' => 'https://lab.stephenbau.com',
                 'email' => 'bauhouse@gmail.com'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2020-03-26T19:37:02+00:00'
+            'release-date' => '2020-03-26T18:54:32+00:00'
         );
     }
 
     public function getSource()
     {
-        return '1';
+        return '7';
     }
 
     public function allowEditorToParse()

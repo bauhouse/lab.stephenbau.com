@@ -15,7 +15,7 @@ class datasourcecategories extends SectionDatasource
     );
     public $dsParamSORT = 'title';
     public $dsParamHTMLENCODE = 'no';
-    public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
+    public $dsParamASSOCIATEDENTRYCOUNTS = 'yes';
 
     public $dsParamFILTERS = array(
         '7' => '{$category}',
@@ -41,7 +41,7 @@ class datasourcecategories extends SectionDatasource
                 'website' => 'https://lab.stephenbau.com',
                 'email' => 'bauhouse@gmail.com'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2020-03-26T17:00:37+00:00'
+            'release-date' => '2020-03-26T19:28:41+00:00'
         );
     }
 
