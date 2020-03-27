@@ -22,6 +22,7 @@
 				<title>
 					<xsl:call-template name="page-title"/>
 				</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" type="images/png" href="{$workspace}/images/icons/bookmark.png" />
 				<link rel="stylesheet" type="text/css" media="screen" href="{$workspace}/css/master.css" />
 				<link rel="stylesheet" type="text/css" media="screen" href="{$workspace}/css/responsive-grid.css" />
