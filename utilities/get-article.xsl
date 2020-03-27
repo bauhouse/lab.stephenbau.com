@@ -48,7 +48,7 @@
 			<div class="post-meta col span-2">
 				<span><xsl:call-template name="format-date">
 					<xsl:with-param name="date" select="date"/>
-					<xsl:with-param name="format" select="'d m'"/>
+					<xsl:with-param name="format" select="'d m Y'"/>
 				</xsl:call-template></span>
 				<ul>
 					<li>
