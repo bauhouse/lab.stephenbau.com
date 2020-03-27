@@ -6,8 +6,6 @@
 	Author URI: http://www.rodrigogalindez.com
 */
 
-@import url(grid-1080.css);
-
 /*
 Copyright (c) 2009, Yahoo! Inc. All rights reserved.
 Code licensed under the BSD License:
@@ -66,7 +64,7 @@ h4 {
 h5 {
 	margin-bottom: 1em;
 	padding-left: 8px;
-	padding-right: 8px;	
+	padding-right: 8px;
 	font-size: 1.2em;
 	line-height: 1.6;
 }
@@ -130,8 +128,7 @@ pre code {
 }
 
 #wrapper {
-	margin: 0 auto;
-	margin-top: 4em;
+	margin: 2em;
 }
 
 #header {
@@ -171,11 +168,13 @@ pre code {
 	border-top: 1px solid #ddd;
 	overflow: hidden;
 }
+
+.post {
+	border-top-width: 6px;
+}
+
 .comments {
 	border-top-color:#000;
-}
-.post-meta {
-	text-align: right;
 }
 
 .post-content h3 {
@@ -188,14 +187,6 @@ pre code {
 	margin-top: 2em;
 	font-size: 1.7em;
 	line-height: 1.4;
-}
-
-.post-content p {
-	width: 43em;
-}
-
-.post-content div.half-size {
-	width: 62em;
 }
 
 .post-content ul {
@@ -244,10 +235,6 @@ pre code {
 	float: left;
 }
 
-.post-content .pullquote p {
-	width: 14em;
-}
-
 /*
 .post-content blockquote p:before, .post-content blockquote p:after {
 	font-size: 1.6em;
@@ -255,6 +242,10 @@ pre code {
 	content: '"';
 }
 */
+
+.post-meta {
+	margin-bottom: 3em;
+}
 
 .post-meta span {
 	display: block;
@@ -368,11 +359,17 @@ p.meta em {
 
 img.avatar {
 	width: 60px;
-	height: 68px;
+	height: 60px;
 	border: 6px solid #eee;
-	margin-right: 12px;
-	margin-bottom: 2px;
 	float: left;
+}
+
+#about .name {
+	font-size: 1.4em;
+}
+
+#about .section-content {
+	margin-left: 80px;
 }
 
 #twitter blockquote p {
@@ -391,14 +388,14 @@ img.avatar {
 }
 
 #footer {
-	height: 5.4em;
-	padding: 1.5em 0 0 0;
+	padding: 1.5em 0 4em;
 	margin-bottom: 2em;
 	border-top: 1px solid #111;
 	border-bottom: 1px solid #111;
 	clear: both;
 	overflow: hidden;
 	margin-top:2em;
+	position: relative;
 }
 
 #footer p {
@@ -429,11 +426,12 @@ div.half-size p.caption {
 }
 
 p#foo {
-	margin-top: .13em;
 	font-size: 4.6em;
 	font-weight: bold;
 	color: #111;
-	float: right;
+	position: absolute;
+	right: 0;
+	bottom: -.71em;
 }
 
 p#foo em {
@@ -476,7 +474,6 @@ font-weight:400;
 	color:#000;
 }
 .form-row textarea{
-	width:578px;
 	padding:4px;
 }
 input.text,
@@ -507,6 +504,15 @@ p.error{color:#ff0000;}
 .archives{border-top:1px dotted #ddd;padding-top:1em;}
 .archives li{font-size:1.3em;padding-bottom:.5em;margin-bottom:.5em;border-bottom:1px dotted #ddd;}
 
+.archives .span-4 {
+	margin-bottom: 4em;
+}
+
+.archives .span-4 ul {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
 .span-9.copy{margin:4em 0 2em 0;	padding:1em 0 1.5em;border-top:1px dotted #ddd;border-bottom:1px solid #000;}
 .span-9.copy p{
 	font-size:1.4em;
@@ -534,3 +540,109 @@ button#submit{
 /*@end*/
 
 .honey{display:none;}
+
+
+/*
+--------------------------------------------------
+Responsive > 1200px Screens
+-------------------------------------------------- */
+
+@media screen and (min-width: 800px) {
+
+	#wrapper {
+		margin: 4em;
+	}
+
+	.span-2 {
+		width: 16em;
+	}
+
+	.nudge-2 {
+		padding-left: 18.4em;
+	}
+
+	.post {
+		border-top-width: 1px;
+	}
+
+	.post-meta {
+		text-align: right;
+		float: left;
+	}
+
+	#sidebar {
+		padding-left: 18.4em;
+		margin-right: -4%;
+	}
+
+	#sidebar .section {
+		width: 45%;
+		margin-right: 5%;
+		float: right;
+		min-height: 30em;
+	}
+
+	#sidebar #about {
+		float: left;
+	}
+
+	.archives .span-4 {
+		width: 33%;
+		float: left;
+	}
+
+}
+
+/*
+--------------------------------------------------
+Responsive > 1200px Screens
+-------------------------------------------------- */
+
+@media screen and (min-width: 1200px) {
+
+	#wrapper {
+		margin: 4em auto;
+	}
+
+	.post-content .pullquote p {
+		width: 14em;
+	}
+
+	.post-content p {
+		width: 43em;
+	}
+
+	.post-content div.half-size {
+		width: 62em;
+	}
+
+	.form-row textarea{
+		width:578px;
+	}
+
+	#sidebar {
+		padding-left: 0;
+	}
+
+	#sidebar .section {
+		width: auto;
+		margin-right: 0;
+		float: none;
+		min-height: 0;
+	}
+
+	#footer {
+		padding-bottom: 0;
+		height: 5.4em;
+	}
+
+	.archives .span-4 {
+		width: 34.4em;
+	}
+
+	.archives .span-4 ul {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+}
