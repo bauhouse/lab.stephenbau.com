@@ -23,26 +23,26 @@
 					<xsl:call-template name="page-title"/>
 				</title>
 				<link rel="icon" type="images/png" href="{$workspace}/images/icons/bookmark.png" />
-				<link rel="stylesheet" type="text/css" media="screen" href="{$workspace}/css/grid-1080.css" />
 				<link rel="stylesheet" type="text/css" media="screen" href="{$workspace}/css/master.css" />
+				<link rel="stylesheet" type="text/css" media="screen" href="{$workspace}/css/responsive-grid.css" />
 				<xsl:comment><![CDATA[[if lte IE 6]><link rel="stylesheet" type="text/css" href="/workspace/css/ie6.css" media="screen, projection" /><![endif]]]></xsl:comment>
 				<link rel="alternate" type="application/rss+xml" href="{$root}/rss/" />
 			</head>
 			<body>
-				<div id="wrapper" class="span-12">			
+				<div id="wrapper" class="span-12">
 					<div id="pages">
 							<xsl:apply-templates select="data/navigation"/>
-					</div>						
+					</div>
 					<div id="header" class="col last span-12">
 						<h1><a href="{$root}"><xsl:value-of select="$website-name"/></a></h1>
 						<h2><span class="by">by </span><xsl:value-of select="data/website-owner/author/name"/></h2>
-					</div>			
-					<xsl:apply-templates select="data"/>											
+					</div>
+					<xsl:apply-templates select="data"/>
 					<div id="footer">
 						<p id="foo"><em>in</em> symphony</p>
 						<p>Original Template by <a href="http://www.rodrigogalindez.com/" title="Rodrigo Galindez">Rodrigo Galindez</a>, re-orchestrated with permission for <a href="http://www.getsymphony.com/" title="Symphony CMS">Symphony</a> by <a href="http://www.fazalkhan.co.uk/" title="Fazal Khan">Fazal Khan.</a></p>
-						<p><xsl:value-of select="$website-name"/> &#169; <xsl:value-of select="$this-year"/><xsl:text> </xsl:text><xsl:value-of select="data/website-owner/author/name"/>. All rights reserved.</p>		
-					</div>			
+						<p><xsl:value-of select="$website-name"/> &#169; <xsl:value-of select="$this-year"/><xsl:text> </xsl:text><xsl:value-of select="data/website-owner/author/name"/>. All rights reserved.</p>
+					</div>
 				</div>
 			</body>
 		</html>
