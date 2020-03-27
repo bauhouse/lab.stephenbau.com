@@ -12,7 +12,7 @@ class datasourceall_categories extends SectionDatasource
     public $dsParamREDIRECTONREQUIRED = 'no';
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
-    public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
+    public $dsParamASSOCIATEDENTRYCOUNTS = 'yes';
 
     public $dsParamINCLUDEDELEMENTS = array(
         'title'
@@ -30,10 +30,10 @@ class datasourceall_categories extends SectionDatasource
             'name' => 'All Categories',
             'author' => array(
                 'name' => 'Stephen Bau',
-                'website' => 'https://lab.stephenbau.com',
+                'website' => 'http://home/www/lab.stephenbau.com',
                 'email' => 'bauhouse@gmail.com'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2020-03-26T16:40:52+00:00'
+            'release-date' => '2020-03-27T05:12:45+00:00'
         );
     }
 
