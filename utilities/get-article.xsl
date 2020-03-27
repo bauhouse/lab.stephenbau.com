@@ -10,13 +10,13 @@
 			<xsl:otherwise>articles</xsl:otherwise>
 		</xsl:choose>
 	</xsl:param>
-	
+
 	<xsl:template match="entry" mode="article">
 		<div class="post span-9">
 			<div class="post-meta col span-2">
 				<span><xsl:call-template name="format-date">
 					<xsl:with-param name="date" select="date"/>
-					<xsl:with-param name="format" select="'d m'"/>
+					<xsl:with-param name="format" select="'d m Y'"/>
 				</xsl:call-template></span>
 				<ul>
 					<li>
@@ -35,7 +35,7 @@
 				<xsl:apply-templates select="body/*[position() &lt; 3]" mode="html"/>
 					<xsl:if test="(article-images) and (manage-images = 'Yes')">
 						<xsl:call-template name="get-images">
-							<xsl:with-param name="image-entry" select="article-images/item"/>					
+							<xsl:with-param name="image-entry" select="article-images/item"/>
 						</xsl:call-template>
 					</xsl:if>
 				<xsl:apply-templates select="body/*[position() &gt; 2]" mode="html"/>
