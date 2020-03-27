@@ -6,16 +6,18 @@
 	<xsl:template name="about">
 		<div id="about" class="section">
 			<h3>About</h3>
-			<img src="{$workspace}{about-me/entry/photo/@path}/{about-me/entry/photo/filename}" alt="Avatar" class="avatar" />
 			<xsl:for-each select="about-me/entry">
-				<xsl:if test="name">
-					<p>
-						<a href="{link}"><xsl:value-of select="name" /></a>
-					</p>
-				</xsl:if>
-				<xsl:copy-of select="summary/*" />
+				<img src="{$workspace}{photo/@path}/{photo/filename}" alt="Avatar" class="avatar" />
+				<div class="section-content">
+					<xsl:if test="name">
+						<p class="name">
+							<a href="{link}"><xsl:value-of select="name" /></a>
+						</p>
+					</xsl:if>
+					<xsl:copy-of select="summary/*" />
+					<p> <a href="{$root}/about/">Read more</a>.</p>
+				</div>
 			</xsl:for-each>
-			<p> <a href="{$root}/about/">Read more</a>.</p>
 		</div>
 	</xsl:template>
 
@@ -48,7 +50,7 @@
 				</xsl:for-each>
 			</ul>
 		</div>
-	</xsl:template>	
+	</xsl:template>
 
 	<xsl:template name="tag">
 		<div class="section">
