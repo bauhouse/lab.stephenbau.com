@@ -35,7 +35,7 @@
 				<xsl:apply-templates select="body/*[position() &lt; 3]" mode="html"/>
 					<xsl:if test="(article-images) and (manage-images = 'Yes')">
 						<xsl:call-template name="get-images">
-							<xsl:with-param name="image-entry" select="article-images/item"/>
+							<xsl:with-param name="image-entry" select="/data/article-image/entry"/>
 						</xsl:call-template>
 					</xsl:if>
 				<xsl:apply-templates select="body/*[position() &gt; 2]" mode="html"/>

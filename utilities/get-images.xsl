@@ -30,7 +30,7 @@
 		<xsl:param name="caption-class" />	
 		<xsl:param name="width" />
 		<xsl:param name="height" />
-		<img src="{$root}/image/2/{$width}/{$height}/2{@path}/{filename}" alt="{description}" class="{$image-class}"/>
+		<img src="{$workspace}{@path}/{filename}" alt="{description}" class="{$image-class}"/>
 		<p class="{$caption-class}">
 			<xsl:value-of select="../description"/>
 		</p>
