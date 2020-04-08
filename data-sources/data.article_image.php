@@ -1,59 +1,50 @@
 <?php
 
-class datasourcearticle extends SectionDatasource
+class datasourcearticle_image extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'article';
+    public $dsParamROOTELEMENT = 'article-image';
     public $dsParamORDER = 'desc';
-    public $dsParamPAGINATERESULTS = 'yes';
-    public $dsParamLIMIT = '1';
+    public $dsParamPAGINATERESULTS = 'no';
+    public $dsParamLIMIT = '20';
     public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamPARAMOUTPUT = array(
-        'article-images'
-    );
-    public $dsParamSORT = 'date';
+    public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '1' => '{$entry}',
-        '3' => 'yes',
+        'system:id' => '{$ds-article}',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
-        'title',
-        'body: formatted',
-        'date',
-        'manage-images',
-        'article-images',
-        'categories',
-        'tags'
+        'image',
+        'description'
     );
 
     public function __construct($env = null, $process_params = true)
     {
         parent::__construct($env, $process_params);
-        $this->_dependencies = array();
+        $this->_dependencies = array('$ds-article');
     }
 
     public function about()
     {
         return array(
-            'name' => 'Article',
+            'name' => 'Article Image',
             'author' => array(
                 'name' => 'Stephen Bau',
                 'website' => 'https://lab.stephenbau.com',
                 'email' => 'bauhouse@gmail.com'),
             'version' => 'Symphony 2.7.10',
-            'release-date' => '2020-04-08T04:51:50+00:00'
+            'release-date' => '2020-04-08T05:00:59+00:00'
         );
     }
 
     public function getSource()
     {
-        return '1';
+        return '4';
     }
 
     public function allowEditorToParse()
