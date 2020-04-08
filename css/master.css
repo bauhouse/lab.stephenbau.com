@@ -31,6 +31,7 @@ hr {
 
 img {
 	vertical-align: middle;
+	max-width: 100%;
 }
 h1,h2,h3,h4,h5{font-weight:700}
 h1 {
@@ -403,19 +404,10 @@ img.avatar {
 	font-size: 1.2em;
 }
 
-img.full-width {
-	display: block;
-	margin-left: -18.4em;
-	margin-bottom: 2em;
-}
-
 p.full-width-caption {
-	width: 11.2em;
-	margin-left: -14.4em;
 	font-size: 1.3em;
 	font-style: italic;
 	color: #999;
-	float: left;
 }
 
 div.half-size p.caption {
@@ -644,5 +636,19 @@ Responsive > 1200px Screens
 		padding-left: 0;
 		padding-right: 0;
 	}
+
+  img.full-width {
+  	display: block;
+  	margin-left: -18.4em;
+  	margin-bottom: 2em;
+  	max-width: 796px;
+  	width: 796px;
+  }
+  
+  p.full-width-caption {
+  	width: 11.2em;
+  	margin-left: -14.4em;
+  	float: left;
+  }
 
 }
